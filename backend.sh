@@ -8,6 +8,7 @@ mkdir /app
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
 cd /app
 #unzip -o /tmp/backend.zip
+unzip  /tmp/backend.zip
 cd /app
 npm install
 #cp $scriptpath/backend.service /etc/systemd/system/backend.service
