@@ -1,5 +1,5 @@
 pwd
 ls
- cd /etc
+ cd /tmp
 
  ls
