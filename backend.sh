@@ -48,6 +48,7 @@ npm install &>>/tmp/expense.log
 echo $?
 
 printHeading "start backend service"
+
 systemctl daemon-reload &>>/tmp/expense.log 
 systemctl enable backend &>>/tmp/expense.log 
 systemctl start backend &>>/tmp/expense.log 
