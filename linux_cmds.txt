@@ -19,3 +19,21 @@ curl -o new.txt https://.....//jenkins.jar
 the above cmd will not work because curl cmd not download the url in new.txt file(no proper location)
 curl -L -o  new.txt https://.....//jenkins.jar
 the above command will works
+
+
+Redirectors:Earlier we are giving the i/ps through keyboard and getting o/p through cmd prompt.
+ now we have to pass the input in a file and execute that file and to display the content to the file
+ for this we have to go for redirectories....
+============
+'>' single redirector will display some content only.
+'>' , 2> : displays some content and errors
+>/tmp/expense.log----displays the content
+2>/tmp/err----displays an error
+
+to display both content and error in one operator so we can use '&>'
+&>/tmp/expense.log
+it displays override content i.e last "error content will display"
+so we overcome this problem we can go for ">>"
+when we use ">>" it displays complete content about backend.sh
+">>/tmp/expense.log"
+
