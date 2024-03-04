@@ -1,4 +1,5 @@
 #scriptpath="$PWD"
+mysql_root_passwd=$1
 dnf module disable nodejs -y &>>/tmp/expense.log
 dnf module enable nodejs:20 -y &>>/tmp/expense.log 
 dnf install nodejs -y &>>/tmp/expense.log 
@@ -18,4 +19,4 @@ systemctl daemon-reload &>>/tmp/expense.log
 systemctl enable backend &>>/tmp/expense.log 
 systemctl start backend &>>/tmp/expense.log 
 dnf install mysql -y &>>/tmp/expense.log 
-mysql -h 172.31.4.183 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>/tmp/expense.log 
+mysql -h 172.31.4.183 -uroot -p${mysql_root_passwd} < /app/schema/backend.sql &>>/tmp/expense.log
