@@ -1,5 +1,6 @@
 #scriptpath="$PWD"
 source common.sh
+
 mysql_root_passwd=$1
 printHeading "disable default NodeJS Version module"
 dnf module disable nodejs -y &>>/tmp/expense.log
