@@ -1,0 +1,21 @@
+/ -----forward slash is a parent user in linux
+ls-----get a list of files and directories
+ls -l-----get a list of files in long format
+ls -A-----get a list of hidden files
+ls -Al ----get a list of hidden and normal files
+touch page.txt ----create a text file
+cat page.txt ----get the content from the text file
+grep root page.txt----filter the words from the text file
+tail -n -5 page.txt----to display the content from last 5 lines from the text file
+head -n -5 page.txt------ to display the content from top 5 lines from the text file
+awk-----to display content in column wise
+awk -F : '{print$1,print$2,....}'
+curl ---to download the files,zip,tar,...
+curl https://.....//jenkins.jar
+if we download with the same name of the url we can use
+curl -O https://.....//jenkins.jar
+if we download the url with some customized name we can use
+curl -o new.txt https://.....//jenkins.jar
+the above cmd will not work because curl cmd not download the url in new.txt file(no proper location)
+curl -L -o  new.txt https://.....//jenkins.jar
+the above command will works
