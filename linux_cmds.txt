@@ -39,4 +39,15 @@ when we use ">>" it displays complete content about backend.sh
 
 
 
+VAriables:
+=============
+# is a comment in shell scripting
+to display the content we can use "echo"
+there are some special characters:
+$0,$1,$*(to display the output)
+$#(to display the total length depends on numbers,string)enclosed with double quotes
+
+
+
+
 
