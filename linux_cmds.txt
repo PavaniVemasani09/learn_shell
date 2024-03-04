@@ -27,7 +27,7 @@ Redirectors:Earlier we are giving the i/ps through keyboard and getting o/p thro
 ============
 '>' single redirector will display some content only.
 '>' , 2> : displays some content and errors
->/tmp/expense.log----displays the content
+>/tmp/expense.log---- override the  the content
 2>/tmp/err----displays an error
 
 to display both content and error in one operator so we can use '&>'
@@ -35,6 +35,7 @@ to display both content and error in one operator so we can use '&>'
 it displays override content i.e last "error content will display"
 so we overcome this problem we can go for ">>"
 when we use ">>" it displays complete content about backend.sh
+append the content
 ">>/tmp/expense.log"
 
 
