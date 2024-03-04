@@ -1,3 +1,4 @@
+scriptpath="$PWD"
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 dnf install nodejs -y
@@ -9,7 +10,8 @@ cd /app
 unzip -o /tmp/backend.zip
 cd /app
 npm install
-cp $PWD/backend.service /etc/systemd/system/backend.service
+cp $scriptpath/backend.service /etc/systemd/system/backend.service
+
 systemctl daemon-reload
 systemctl enable backend
 systemctl start backend
