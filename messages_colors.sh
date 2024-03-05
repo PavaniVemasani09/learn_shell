@@ -1,6 +1,6 @@
 echo -e "\e[31m Hello i am in REd Color\e[0m"
 echo -e "\e[32m Hello i am in green color\e[0m"
-echo -e "\e[33m Hello i am in magenta color\e[0m"
+echo -e "\e[33m Hello i am in yellow color\e[0m"
 echo -e "\e[34m Hello i am in blue color \e[0m"
-echo -e "\e[35m Hello i am in yellow color \e[0m"
+echo -e "\e[35m Hello i am in magenta color \e[0m"
 echo -e "\e[36m Hello i am in cyan color \e[0m"
