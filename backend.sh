@@ -9,58 +9,58 @@ if [ -z "${mysql_root_passwd}" ];then
     fi
 
 printHeading "disable default NodeJS Version module"
-dnf module disable nodejs -y &>>/tmp/expense.log
+dnf module disable nodejs -y &>>$LOG
 
 printHeading "enable default NodeJs Version module"
-dnf module enable nodejs:20 -y &>>/tmp/expense.log
+dnf module enable nodejs:20 -y &>>$LOG
 checkStatus $?
 
 printHeading "Install NodeJs"
-dnf install nodejs -y &>>/tmp/expense.log
+dnf install nodejs -y &>>$LOG
 checkStatus $?
 
 printHeading "adding application user"
-useradd expense &>>/tmp/expense.log
+useradd expense &>>$LOG
 checkStatus $?
 
 printHeading "Copy Backend Service file"
-cp backend.service /etc/systemd/system/backend.service &>>/tmp/expense.log 
+cp backend.service /etc/systemd/system/backend.service &>>$LOG 
 checkStatus $?
 
 #remove the /app by using below cmd before executing .i.e first iteration will work ,next iterations it wont work.
 printHeading "clean the old content"
-rm -rf /app &>>/tmp/expense.log
+rm -rf /app &>>$LOG
 checkStatus $?
 
 printHeading "make a directory"
-mkdir /app &>>/tmp/expense.log 
+mkdir /app &>>$LOG 
 checkStatus $?
 
 printHeading "download backend zip file"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>/tmp/expense.log
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>$LOG
 checkStatus $?
 
 printHeading "move to the specific directory and unzip the file"
 cd /app &>>/tmp/expens.log
-unzip  /tmp/backend.zip &>>/tmp/expense.log
+unzip  /tmp/backend.zip &>>$LOG
 checkStatus $?
 
 printHeading "install npm"
 cd /app &>>/tmp/expens.log
-npm install &>>/tmp/expense.log 
+npm install &>>$LOG 
 checkStatus $?
 
 printHeading "start backend service"
 
-systemctl daemon-reload &>>/tmp/expense.log 
-systemctl enable backend &>>/tmp/expense.log 
-systemctl start backend &>>/tmp/expense.log 
+systemctl daemon-reload &>>$LOG 
+systemctl enable backend &>>$LOG 
+systemctl start backend &>>$LOG 
 checkStatus $?
 
 printHeading "Install MySQL Client"
-dnf install mysql -y &>>/tmp/expense.log
+dnf install mysql -y &>>$LOG
 checkStatus $?
 
 printHeading "Install Load Schema"
-mysql -h 172.31.4.183 -uroot -p${mysql_root_passwd} < /app/schema/backend.sql &>>/tmp/expense.log
+mysql -h 172.31.4.183 -uroot -p${mysql_root_passwd} < /app/schema/backend.sql &>>$LOG
 checkStatus $?

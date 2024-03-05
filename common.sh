@@ -1,7 +1,8 @@
+LOG=/tmp/expense.log
 printHeading()
 {
   echo $1
-  echo "##############$1 #############" &>>/tmp/expense.log
+  echo "##############$1 #############" &>>$LOG
 }
 checkStatus()
 {
