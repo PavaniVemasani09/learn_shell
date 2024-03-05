@@ -3,6 +3,7 @@ source common.sh
 mysql_root_passwd=$1
 if [ -z "${mysql_root_passwd}" ];then
   echo "FAILURE"
+  exit 1
   else
     echo "SUCCESS"
     fi
