@@ -13,5 +13,8 @@ systemctl start mysqld &>>LOG
 checkStatus $?
 
 printHeading "Install nginx"
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>LOG
+echo 'show databases' | mysql -h 172.31.4.183 -uroot -p${mysql_root_passwd} &>>LOG
+if [ $? -ne 0 ];then
+  mysql_secure_installation --set-root-pass ${mysql_root_passwd} &>>LOG
+  fi
 checkStatus $?
