@@ -1,7 +1,11 @@
 #scriptpath="$PWD"
 source common.sh
 mysql_root_passwd=$1
-checkStatus $?
+if [ -z "${mysql_root_passwd}" ];then
+  echo "FAILURE"
+  else
+    echo "SUCCESS"
+    fi
 
 printHeading "disable default NodeJS Version module"
 dnf module disable nodejs -y &>>/tmp/expense.log
