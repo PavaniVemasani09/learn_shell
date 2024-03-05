@@ -5,7 +5,7 @@ if [ -z "${mysql_root_passwd}" ];then
   echo "MySQL Password is missing"
   exit 1
   else
-    echo "SUCCESS"
+    echo -e "\e[32m SUCCESS\e[0m"
     fi
 
 printHeading "disable default NodeJS Version module"
