@@ -5,6 +5,7 @@ if [ -z "${mysql_root_passwd}" ];then
   echo "Password is missing"
   exit 1
   fi
+
 printHeading "disable default NodeJS Version module"
 dnf module disable nodejs -y &>>/tmp/expense.log
 echo $?
