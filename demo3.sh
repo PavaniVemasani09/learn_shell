@@ -1,5 +1,4 @@
 pwd
-
+cat ex1.sh
 cd /tmp
 ls
-cat ex1.sh
