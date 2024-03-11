@@ -2,7 +2,7 @@ dnf install nodejs -y
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 useradd expense
-vim /etc/systemd/system/backend.service
+cp expense_backend.servive /etc/systemd/system/backend.service
 mkdir /app
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
 cd /app
