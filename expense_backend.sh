@@ -37,17 +37,17 @@ mkdir /app &>>$LOG
 print_status $?
 
 
-print_heading "Download backend code"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
-print_status $?
+#print_heading "Download backend code"
+#curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
+#print_status $?
 
 print_heading "Move to app directory"
 cd ${app_dir} &>>LOG
 print_status $?
 
-print_heading "unzip backend code"
-unzip /tmp/backend.zip &>>$LOG
-print_status $?
+#print_heading "unzip backend code"
+#unzip /tmp/backend.zip &>>$LOG
+#print_status $?
 
 print_heading "move to app directory"
 cd /app &>>$LOG
