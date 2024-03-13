@@ -28,18 +28,18 @@ print_status $?
 
 
 
-#print_heading "clean old content"
-#rm -rf /app &>>$LOG
-#print_status $?
-App_task_code
+print_heading "clean old content"
+rm -rf /app &>>$LOG
+print_status $?
+
 print_heading "make directory app"
 mkdir /app &>>$LOG
 print_status $?
 
 
-#print_heading "Download backend code"
-#curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
-#print_status $?
+print_heading "Download backend code"
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
+print_status $?
 
 print_heading "Move to app directory"
 cd ${app_dir} &>>LOG
