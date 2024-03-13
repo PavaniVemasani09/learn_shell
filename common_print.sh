@@ -17,7 +17,7 @@ print_status()
 App_task_code()
 {
 print_heading "clean directory when we iterate second time"
-rm -rf /app &>>$LOG
+rm -rf /${app_dir} &>>$LOG
 print_status $?
 
 print_heading "Download  zip  file"
