@@ -10,7 +10,7 @@ dnf module disable nodejs -y &>>LOG
 dnf module enable nodejs:20 -y &>>LOG
 print_status $?
 
-ptint_heading "Install nodejs"
+print_heading "Install nodejs"
 dnf install nodejs -y &>>LOG
 print_status $?
 
