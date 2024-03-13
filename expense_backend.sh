@@ -1,6 +1,10 @@
 source common_print.sh
 mysql_root_password=$1
-print_heading "Password should not be hardcoded"
+
+echo "Install nodejs"
+dnf install nodejs -y &>>/tmp/expense.log
+print_heading "To know success or failure"
+print_status
 
 print_heading "disable and enable backend service"
 dnf module disable nodejs -y &>>/tmp/expense.log
@@ -8,10 +12,7 @@ dnf module enable nodejs:20 -y &>>/tmp/expense.log
 print_heading "To know success or failure"
 print_status
 
-echo "Install nodejs"
-dnf install nodejs -y &>>/tmp/expense.log
-print_heading "To know success or failure"
-print_status
+
 
 print_heading "Add application user"
 useradd expense &>>/tmp/expense.log
@@ -66,5 +67,5 @@ dnf install mysql -y &>>/tmp/expense.log
 print_status
 
 print_heading "Load schema"
-mysql -h 172.31.5.158 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
+mysql -h 172.31.11.119  -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
 print_status
