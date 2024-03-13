@@ -1,5 +1,5 @@
 source common_print.sh
-
+mysql_root_password=$1
 print_heading "Password should not be hardcoded"
 
 print_heading "disable and enable backend service"
@@ -66,5 +66,5 @@ dnf install mysql -y &>>/tmp/expense.log
 print_status
 
 print_heading "Load schema"
-mysql -h 172.31.5.158 -uroot -p${print_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
+mysql -h 172.31.5.158 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
 print_status
