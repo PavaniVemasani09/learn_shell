@@ -71,5 +71,5 @@ dnf install mysql -y &>>$LOG
 print_status $?
 
 print_heading "Load schema"
-mysql -h 172.31.11.119  -uroot -p${mysql_root_password} < /app/schema/${component}.sql &>>$LOG
+mysql -h 172.31.5.158  -uroot -p${mysql_root_password} < /app/schema/${component}.sql &>>$LOG
 print_status $?
