@@ -7,7 +7,7 @@ print_status()
 {
   echo $?
 }
-print_root_password()
-{
-  mysql_root_password=$1
-}
+#print_root_password()
+#{
+#  mysql_root_password=$1
+#}
