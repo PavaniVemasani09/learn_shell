@@ -6,7 +6,7 @@ print_heading()
 }
 print_status()
 {
-  echo $?
+#  echo $?
   if [ $1 -eq 0 ];then
   echo SUCCESS
   else
