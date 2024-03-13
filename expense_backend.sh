@@ -1,3 +1,5 @@
+echo "Password should not be hardcoded"
+mysql_root_password=$1
 echo "disable and enable backend service"
 dnf module disable nodejs -y &>>/tmp/expense.log
 dnf module enable nodejs:20 -y &>>/tmp/expense.log
@@ -62,5 +64,5 @@ dnf install mysql -y &>>/tmp/expense.log
 echo $?
 
 echo "Load schema"
-mysql -h 172.31.5.158 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>/tmp/expense.log
+mysql -h 172.31.5.158 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>/tmp/expense.log
 echo $?
