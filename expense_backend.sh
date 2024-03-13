@@ -1,5 +1,7 @@
 source common_print.sh
 mysql_root_password=$1
+app_dir=/app
+component=backend
 if [ -z  "${mysql_root_password}" ];then
   print_heading "Input status missing"
   exit 1
@@ -23,29 +25,30 @@ cp expense_backend.service /etc/systemd/system/backend.service &>>$LOG
 print_status $?
 
 
-print_heading "remove directory when we iterate second time"
-rm -rf /app &>>$LOG
-print_status $?
+#print_heading "clean directory when we iterate second time"
+#rm -rf /app &>>$LOG
+#print_status $?
 
 print_heading "make directory app"
 mkdir /app &>>$LOG
 print_status $?
 
-print_heading "Download backend code"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
-print_status $?
+App_task_changes
+#print_heading "Download backend code"
+#curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip &>>$LOG
+#print_status $?
 
-print_heading "Move to app directory"
-cd /app &>>LOG
-print_status $?
+#print_heading "Move to app directory"
+#cd ${app_dir} &>>LOG
+#print_status $?
 
-print_heading "unzip backend code"
-unzip /tmp/backend.zip &>>$LOG
-print_status $?
+#print_heading "unzip backend code"
+#unzip /tmp/backend.zip &>>$LOG
+#print_status $?
 
-print_heading "move to app directory"
-cd /app &>>$LOG
-print_status $?
+#print_heading "move to app directory"
+#cd /app &>>$LOG
+#print_status $?
 
 print_heading "Install npm package for dependencies"
 npm install &>>$LOG
