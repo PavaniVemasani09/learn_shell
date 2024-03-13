@@ -45,9 +45,9 @@ print_status $?
 #cd ${app_dir} &>>LOG
 #print_status $?
 #
-#print_heading "unzip backend code"
-#unzip /tmp/backend.zip &>>$LOG
-#print_status $?
+print_heading "unzip backend code"
+unzip /tmp/backend.zip &>>$LOG
+print_status $?
 
 print_heading "move to app directory"
 cd /app &>>$LOG
