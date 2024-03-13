@@ -22,11 +22,12 @@ print_status $?
 
 print_heading "move to nginx html directory"
 cd /usr/share/nginx/html &>>LOG
-print_status $?
-
-print_heading "unzip frontend zip file"
 unzip /tmp/frontend.zip &>>LOG
 print_status $?
+
+#print_heading "unzip frontend zip file"
+#
+#print_status $?
 
 print_heading "Load the changes of configuration file"
 systemctl restart nginx &>>LOG
