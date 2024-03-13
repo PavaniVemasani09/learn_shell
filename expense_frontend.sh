@@ -16,11 +16,9 @@ print_heading "remove default content in an nginx file"
 rm -rf /usr/share/nginx/html/* &>>LOG
 print_status $?
 
-
-
 print_heading "Download frontend zip  file"
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip &>>LOG
-print_status $?
+echo $?
 
 print_heading "move to nginx html directory"
 cd /usr/share/nginx/html/ &>>LOG
