@@ -8,7 +8,7 @@ fi
 print_heading "disable and enable backend service"
 dnf module disable nodejs -y &>>LOG
 dnf module enable nodejs:20 -y &>>LOG
-print_status
+print_status $?
 
 ptint_heading "Install nodejs"
 dnf install nodejs -y &>>LOG
