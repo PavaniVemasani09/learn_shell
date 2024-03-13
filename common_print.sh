@@ -24,7 +24,13 @@ print_heading "Download  zip  file"
 curl -o /tmp/${component}.zip https://expense-artifacts.s3.amazonaws.com/expense-${component}-v2.zip &>>$LOG
 print_status $?
 
+print_heading "Move to app directory"
+cd ${app_dir} &>>LOG
+print_status $?
 
+print_heading "unzip  code"
+unzip /tmp/${component}.zip &>>$LOG
+print_status $?
 #print_heading "unzip  code"
 #unzip /tmp/${component}.zip &>>$LOG
 #print_status $?
