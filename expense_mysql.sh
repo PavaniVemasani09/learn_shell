@@ -2,14 +2,14 @@ source common_print.sh
 mysql_root_password=$1
 
 print_heading "Install Mysql server"
-dnf install mysql-server -y &>>/tmp/expense.log
-print_status
+dnf install mysql-server -y &>>LOG
+print_status $?
 
 print_heading "start mysql service"
-systemctl enable mysqld &>>/tmp/expense.log
-systemctl start mysqld &>>/tmp/expense.log
-print_status
+systemctl enable mysqld &>>LOG
+systemctl start mysqld &>>LOG
+print_status $?
 
 print_heading "set root password"
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>/tmp/expense.log
-print_status
+mysql_secure_installation --set-root-pass {mysql_root_password} &>>LOG
+print_status $?
