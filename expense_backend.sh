@@ -18,7 +18,7 @@ print_status $?
 
 print_heading "Add application user"
 id expense &>>LOG
-echo id
+echo ${id}
 if [ ${id} -ne 0 ];then
 useradd expense &>>$LOG
 fi
