@@ -1,6 +1,5 @@
 source common_print.sh
 app_dir=/usr/share/nginx/html
-component=frontend
 print_heading "Install Nginx"
 dnf install nginx -y &>>$LOG
 print_status $?
@@ -10,8 +9,8 @@ systemctl enable nginx &>>$LOG
 systemctl start nginx &>>$LOG
 print_status $?
 
-print_heading "clean default content in an nginx file"
-rm -rf ${app_dir}/* &>>$LOG
+print_heading "remove default content in an nginx file"
+rm -rf /usr/share/nginx/html/* &>>$LOG
 print_status $?
 
 print_heading "copy configuration into nginx config file"
@@ -23,7 +22,7 @@ curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-fro
 print_status $?
 
 print_heading "move to nginx html directory"
-cd ${app_dir} &>>$LOG
+cd app_dir &>>$LOG
 print_status $?
 
 print_heading "unzip frontend zip file"
