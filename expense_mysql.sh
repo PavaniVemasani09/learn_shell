@@ -2,7 +2,6 @@ source common_print.sh
 mysql_root_password=$1
 if [ -z "${mysql_root_password}" ];then
   print_heading "Root password is missing"
-  print_status $?
   exit 1
   fi
 
