@@ -3,6 +3,6 @@
 #cd /tmp
 #ls
 
-ls &>>/tmp
+ls &>>/tmp/page.log
 
 
