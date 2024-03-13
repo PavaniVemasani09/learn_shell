@@ -26,7 +26,7 @@ App_task_code
 #print_status $?
 
 print_heading "move to app directory"
-cd ${app_dir} &>>$LOG
+cd /app &>>$LOG
 print_status $?
 
 print_heading "unzip frontend zip file"
