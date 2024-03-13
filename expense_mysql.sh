@@ -1,5 +1,6 @@
 source common_print.sh
 mysql_root_password=$1
+
 print_heading "Install Mysql server"
 dnf install mysql-server -y &>>/tmp/expense.log
 print_status

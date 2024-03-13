@@ -1,3 +1,4 @@
+LOG=/tmp/expense.log
 print_heading()
 {
   echo $1
