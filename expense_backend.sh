@@ -1,5 +1,5 @@
 echo "disable and enable backend service"
-dnf module disable nodejs -y &>/tmp/expense.log
+dnf module disable nodejs -y &>>/tmp/expense.log
 dnf module enable nodejs:20 -y &>>/tmp/expense.log
 echo "To know success or failure"
 echo $?
