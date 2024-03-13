@@ -25,9 +25,9 @@ print_status $?
 #curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip &>>$LOG
 #print_status $?
 
-#print_heading "move to app directory"
-#cd ${app_dir} &>>$LOG
-#print_status $?
+print_heading "move to app directory"
+cd ${app_dir} &>>$LOG
+print_status $?
 
 print_heading "unzip frontend zip file"
 unzip /tmp/${component}.zip &>>$LOG
