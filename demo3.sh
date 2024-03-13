@@ -1,8 +1,8 @@
-#pwd
-#cat ex1.sh
-#cd /tmp
-#ls
+pwd
+cat ex1.sh
+cd /tmp
+ls
 
-ls &>>/tmp/page.log
+ls >/tmp/page.log
 
 
