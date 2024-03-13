@@ -28,9 +28,9 @@ print_status $?
 
 App_task_code
 
-print_heading "clean directory when we iterate second time"
-rm -rf /app &>>$LOG
-print_status $?
+#print_heading "clean old content"
+#rm -rf /app &>>$LOG
+#print_status $?
 
 print_heading "make directory app"
 mkdir /app &>>$LOG
