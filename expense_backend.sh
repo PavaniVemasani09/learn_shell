@@ -1,12 +1,9 @@
 source common_print.sh
-expense_log()
-{
-  &>>/tmp/expense.log
-}
+
 print_heading "Password should not be hardcoded"
 
 print_heading "disable and enable backend service"
-dnf module disable nodejs -y expense_log
+dnf module disable nodejs -y &>>/tmp/expense.log
 dnf module enable nodejs:20 -y &>>/tmp/expense.log
 print_heading "To know success or failure"
 print_status
