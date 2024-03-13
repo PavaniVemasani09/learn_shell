@@ -20,7 +20,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf &>>$LOG
 print_status $?
 
 
-
+App_task_code
 #print_heading "Download frontend zip  file"
 #curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip &>>$LOG
 #print_status $?
