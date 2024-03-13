@@ -16,16 +16,12 @@ print_status()
 }
 App_task_code()
 {
-print_heading "clean default content in an nginx file"
-rm -rf ${app_dir} &>>$LOG
-print_status $?
+
 print_heading "Download frontend zip  file"
 curl -o /tmp/${component}.zip https://expense-artifacts.s3.amazonaws.com/expense-${component}-v2.zip &>>$LOG
 print_status $?
 print_heading "unzip frontend zip file"
 unzip /tmp/${component}.zip &>>$LOG
 print_status $?
-print_heading "move to nginx html directory"
-cd ${app_dir} &>>$LOG
-print_status $?
+
 }
