@@ -1,8 +1,5 @@
-pwd
-cat ex1.sh
-cd /tmp
-ls
+echo ${a}
 
-ls >/tmp/page.log
+
 
 
