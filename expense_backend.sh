@@ -1,27 +1,21 @@
 source common_print.sh
 mysql_root_password=$1
 
-echo "Install nodejs"
-dnf install nodejs -y &>>/tmp/expense.log
-print_heading "To know success or failure"
-print_status
-
 print_heading "disable and enable backend service"
 dnf module disable nodejs -y &>>/tmp/expense.log
 dnf module enable nodejs:20 -y &>>/tmp/expense.log
-print_heading "To know success or failure"
 print_status
 
-
+ptint_heading "Install nodejs"
+dnf install nodejs -y &>>/tmp/expense.log
+print_status
 
 print_heading "Add application user"
 useradd expense &>>/tmp/expense.log
-print_heading "To know success or failure"
 print_status
 
 print_heading "Copy backend service file into another folder"
 cp expense_backend.service /etc/systemd/system/backend.service &>>/tmp/expense.log
-print_heading "To know success or failure"
 print_status
 
 
