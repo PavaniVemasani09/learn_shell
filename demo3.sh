@@ -1,5 +1,5 @@
  source ex1.sh
- ${a}
+ echo ${a}
 
 
 
