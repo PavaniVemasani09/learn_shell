@@ -22,7 +22,7 @@ curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-fro
 print_status $?
 
 print_heading "move to nginx html directory"
-cd /app &>>$LOG
+cd /usr/share/nginx/html &>>$LOG
 print_status $?
 
 print_heading "unzip frontend zip file"
