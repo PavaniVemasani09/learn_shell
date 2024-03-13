@@ -7,4 +7,9 @@ print_heading()
 print_status()
 {
   echo $?
+  if [ $0 -eq 0 ];then
+  echo SUCCESS
+  else
+    echo FAILURE
+  fi
 }

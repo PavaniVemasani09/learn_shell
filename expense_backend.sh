@@ -2,12 +2,12 @@ source common_print.sh
 mysql_root_password=$1
 if [ -z  "${mysql_root_password}" ];then
   print_heading "Input status missing"
-  print_status
+  exit 1
 fi
 
 print_heading "disable and enable backend service"
 dnf module disable nodejs -y &>>LOG
-dnf module enable nodejs:20 -y 
+dnf module enable nodejs:20 -y &>>LOG
 print_status
 
 ptint_heading "Install nodejs"
