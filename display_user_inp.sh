@@ -19,8 +19,8 @@
 #echo $txt3
 
 #pass values as command line arguments
-name=$0
-age=$1
+name=$1
+age=$2
 echo "The person name and age is:${name} ${age}"
 
 
