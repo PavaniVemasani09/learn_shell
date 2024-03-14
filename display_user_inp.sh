@@ -13,10 +13,15 @@
 #*****************************#
 
 #concatenate multiple variables and store into a single variable
-txt1="Intellij Idea"
-txt2="Github"
-txt3="${txt1} ${txt2}"
-echo $txt3
+#txt1="Intellij Idea"
+#txt2="Github"
+#txt3="${txt1} ${txt2}"
+#echo $txt3
+
+#pass values as command line arguments
+name=$0
+age=$1
+echo "The person name and age is:${name} ${age}"
 
 
 
