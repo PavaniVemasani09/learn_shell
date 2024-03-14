@@ -7,6 +7,16 @@
 #*****************************#
 
 #Prompt the message along with the read command
-read -p "Enter the number:" num
-echo $num
-echo ${num}
+#read -p "Enter the number:" num
+#echo $num
+#echo ${num}
+#*****************************#
+
+#concatenate multiple variables and store into a single variable
+txt1="Intellij Idea"
+txt2="Github"
+txt3="${txt1} ${txt2}"
+echo $txt3
+
+
+
