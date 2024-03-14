@@ -19,9 +19,16 @@
 #echo $txt3
 
 #pass values as command line arguments
-name=$1
-age=$2
-echo "The person name and age is:${name} ${age}"
+#name=$1
+#age=$2
+#echo "The person name and age is:${name} ${age}"
 
+#adding and subtracting two number
+
+num1=$1
+num2=$2
+res= $num1 + $num2
+echo "The result of two numbers:${res}"
+echo "The result of subtract two numbers are :${res}"
 
 
