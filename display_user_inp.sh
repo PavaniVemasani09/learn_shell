@@ -27,7 +27,7 @@
 
 num1=$1
 num2=$2
-res=$(($num1+$num2))
+res=$((${num1}+${num2}))
 res=$(($num1 - $num2))
 echo "The result of two numbers:${res}"
 echo "The result of subtract two numbers are :${res}"
