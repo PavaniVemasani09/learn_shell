@@ -8,4 +8,4 @@
 
 
 read -p "Enter number :" num1 num2
-echo $(($num1_$num2))
+echo $(($num1+$num2))
