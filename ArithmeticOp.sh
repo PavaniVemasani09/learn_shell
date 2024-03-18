@@ -12,10 +12,10 @@
 
 read -p "Enter two values:" num1 num2
 read -p "Enter Operator:" op
-if [ op == + ]
+if [ $op == + ]
 then
 echo $(($num1+$num2))
-elif [ op == - ]
+elif [ $op == - ]
 then
 echo $(($num1-$num2))
 else
