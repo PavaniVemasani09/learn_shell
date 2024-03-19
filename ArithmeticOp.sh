@@ -32,7 +32,7 @@
 #fi
 
 read -p "Enter String :" p
-echo p
+echo $p
 
 
 
