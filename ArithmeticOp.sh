@@ -37,6 +37,7 @@ if [ $(($num%10)) ]
 then
 tmp=$num
 num=$num/10
-echo $(($tmp*$tmp*$tmp))
+echo $num
+echo $temp
 fi
 
