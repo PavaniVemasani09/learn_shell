@@ -33,5 +33,10 @@
 
 #check given number is a armstrong number or not
 read -p "Enter number:" num
-tmp=$(($num%10))
- echo $tmp
+if [ $(($num%10)) ]
+then
+tmp=$num
+num=$num/10
+echo $(($tmp*$tmp*$tmp))
+fi
+
