@@ -24,7 +24,7 @@
 
 
 read -p "Enter number : " num
-if [ num%2 == 0 ]
+if [ $num%2 == 0 ]
 then
 echo "Even number"
 else
