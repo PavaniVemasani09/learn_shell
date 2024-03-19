@@ -33,4 +33,5 @@
 
 #check given number is a armstrong number or not
 read -p "Enter number:" num
-echo $(($num%10))
+tmp=$(($num%10))
+ echo $tmp
