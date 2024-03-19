@@ -23,10 +23,14 @@
 #fi
 
 
-read -p "Enter number : " num
-if [ $(($num%2)) == 0 ]
-then
-echo "Even number"
-else
-echo "not a even number"
-fi
+#read -p "Enter number : " num
+#if [ $(($num%2)) == 0 ]
+#then
+#echo "Even number"
+#else
+#echo "not a even number"
+#fi
+
+#check given number is a armstrong number or not
+read -p "Enter number:" num
+echo $(($num%10))
