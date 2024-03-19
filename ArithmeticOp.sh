@@ -31,13 +31,6 @@
 #echo "not a even number"
 #fi
 
-#check given number is a armstrong number or not
-read -p "Enter number:" num
-if [ $(($num%10)) ]
-then
-tmp=$num
-num=$num/10
-echo $num
-echo $temp
-fi
+
+
 
