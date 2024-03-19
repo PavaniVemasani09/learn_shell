@@ -31,6 +31,8 @@
 #echo "not a even number"
 #fi
 
+read -p "Enter String :" p
+echo p
 
 
 
